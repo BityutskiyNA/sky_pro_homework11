@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():  # put application's code here
+def hello_world():
     candidates = utils.load_candidates_from_json('candidates.json')
     return render_template('list.html', items=candidates)
 
