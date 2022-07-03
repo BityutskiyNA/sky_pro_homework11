@@ -6,7 +6,8 @@
 </head>
 <body>
 <h1>Все кандидаты</h1>
-<p><a href="/candidate/<x>">Имя кандидата</a></p>
-<p><a href="/candidate/<x>">Имя кандидата</a></p>
+{% for item in items %}
+    <p><a href="/candidate/{{ item['id'] }}">{{ item['name'] }} </a></p>
+{% endfor %}
 </body>
 </html>

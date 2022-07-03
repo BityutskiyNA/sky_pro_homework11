@@ -5,6 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>найдено кандидатов {{len_item}}</h1>
+{% for item in items %}
+    <p><a href="/candidate/{{ item['id'] }}">{{ item['name'] }} </a></p>
+{% endfor %}
 </body>
 </html>
