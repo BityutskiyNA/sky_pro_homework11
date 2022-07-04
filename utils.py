@@ -41,6 +41,8 @@ def get_candidates_by_skill(skill_name):
     found_candidates = []
     candidates = load_candidates_from_json("candidates.json")
     for candidat in candidates:
-        if skill_name in candidat['skills']:
+        candidat_skill = candidat['skills'].upper()
+        candidat_skill = candidat_skill.split(', ')
+        if candidat_skill.count(skill_name.upper()) > 0:
             found_candidates.append(candidat)
     return found_candidates
